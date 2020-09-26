@@ -11,10 +11,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 class Home extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
+        state = {
             // imgStore: '',
             categoryName: '',
             // product_id: '',
@@ -35,8 +32,8 @@ class Home extends React.Component {
             scraping_price: '',
 
             nProduct: 0,
-        }
-    };
+        };
+
 
     // selectImage = (e) => {
     //     const url = e.target.files[0];
@@ -577,8 +574,7 @@ class Home extends React.Component {
                     <div className="flex-card">
                         {
                             scrapingList && scrapingList.map((item, key) => {
-                                 if ((this.state.nProduct < 8) && (typeof (item.scraping_price) !== "undefined")) {
-                                    this.state.nProduct ++;
+                                 if ((key < 8) && (typeof (item.scraping_price) !== "undefined")) {
                                     return (
                                         <div className="w3-card card-bg-padding">
                                             <a href={item.scraping_store_address}><img className="img-item" key={key} src={item.scraping_photo_link} alt="" /></a>
@@ -596,7 +592,7 @@ class Home extends React.Component {
                         <div className="flex-card">
                         {
                             scrapingList && scrapingList.map((item, key) => {
-                                if ((this.state.nProduct >= 8) && (typeof (item.scraping_price) !== "undefined")){
+                                if ((key >= 8) && (typeof (item.scraping_price) !== "undefined")){
                                     return (
                                         <div className="w3-card card-bg-padding">
                                             <a href={item.scraping_store_address}><img className="img-item" key={key} src={item.scraping_photo_link} alt="" /></a>

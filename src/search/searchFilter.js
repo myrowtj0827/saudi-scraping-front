@@ -16,10 +16,6 @@ import virginLogo from "../assets/images/virginLogo.svg";
 import samma3aLogo from "../assets/images/samma3aLogo.webp";
 
 class SearchFilter extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         const {
             //SortProduct,
