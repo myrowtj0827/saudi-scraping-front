@@ -12,11 +12,11 @@ export const createProduct = (productData, history) => dispatch => {
     axios
         .post(config.SIM_API_URL + "api/filters/register-product", productData)
         .then(res => {
-            alert('success');
+            console.log('success');
             console.log(res);
         })
         .catch(err => {
-            alert('fail');
+            console.log('fail');
             dispatch({
                 type: MESSAGE_FORM_API,
                 payload: err.response ? err.response.data : {error: "error"}
@@ -35,7 +35,7 @@ export const fetchAllProducts = () => dispatch => {
 
         })
         .catch(err => {
-            alert('fail' + JSON.stringify(err));
+            console.log('fail' + JSON.stringify(err));
             dispatch({
                 type: MESSAGE_FORM_API,
                 payload: err.response ? err.response.data : {error: "error"}
@@ -58,7 +58,7 @@ export const SortProduct = (category, history) => dispatch => {
 
         })
         .catch(err => {
-            alert('fail-category');
+            console.log('fail-category');
             dispatch({
                 type: MESSAGE_FORM_API,
                 payload: err.response ? err.response.data : {error: "error"}

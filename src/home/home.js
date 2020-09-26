@@ -304,9 +304,11 @@ class Home extends React.Component {
                                required />
                     </div>
 
-                    <div className="w3-btn w3-yellow w3-hover-blue" onClick={this.scrapingData} style={{marginTop: '40px'}}>Scraping Start</div>
+                    {/*<div className="w3-btn w3-yellow w3-hover-blue" onClick={this.scrapingData} style={{marginTop: '40px'}}>Scraping Start</div>*/}
 
-                    <div className="w3-btn w3-yellow w3-hover-blue" onClick={this.scrapingResultShow} style={{marginTop: '40px'}}>Scraping Result</div>
+                    {/*<div className="w3-btn w3-yellow w3-hover-blue" onClick={this.scrapingResultShow} style={{marginTop: '40px'}}>Scraping Result</div>*/}
+
+                    
                     {/*<div className="w3-btn w3-yellow w3-hover-blue" onClick={this.scrapingDelete} style={{marginTop: '40px'}}>DB Delete</div>*/}
 
                     {/*<div className="w3-btn w3-blue w3-hover-yellow" data-toggle="collapse" data-target="#productsInsert" style={{marginTop: '40px'}}>Insert Image</div>*/}

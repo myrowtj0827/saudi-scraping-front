@@ -7,8 +7,9 @@
       <change beforePath="$PROJECT_DIR$/../api/scrapingRestult/final-397-1719.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/test2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/filter/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/filter/filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/filter/scrapingProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/filter/scrapingProduct.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,7 @@
       <workItem from="1595177647870" duration="611000" />
       <workItem from="1595179508628" duration="748000" />
       <workItem from="1597275618956" duration="945000" />
-      <workItem from="1601119751147" duration="2668000" />
+      <workItem from="1601119751147" duration="3385000" />
     </task>
     <servers />
   </component>

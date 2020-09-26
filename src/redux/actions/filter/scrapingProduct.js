@@ -14,11 +14,11 @@ export const gettingLink = () => dispatch => {
     axios
         .post(config.SIM_API_URL + "api/scrapingProduct/scraping-product")
         .then(res => {
-            alert('success');
+            console.log('success');
             console.log(res);
         })
         .catch(err => {
-            alert('Failed - Back end turned off !');
+            console.log('Failed - Back end turned off !');
             dispatch({
                 type: SCRAPING_FORM_API,
                 payload: err.response ? err.response.data : {error: "error"}
@@ -37,7 +37,7 @@ export const scrapingAllProducts = () => dispatch => {
 
         })
         .catch(err => {
-            alert('fail' + JSON.stringify(err));
+            console.log('fail' + JSON.stringify(err));
             dispatch({
                 type: SCRAPING_MESSAGE_FORM_API,
                 payload: err.response ? err.response.data : {error: "error"}
@@ -60,7 +60,7 @@ export const ScrapingSort = (category, history) => dispatch => {
 
         })
         .catch(err => {
-            alert('fail-category');
+            console.log('fail-category');
             dispatch({
                 type: MESSAGE_FORM_API,
                 payload: err.response ? err.response.data : {error: "error"}
