@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from "react-redux";
 import { createProduct, fetchAllProducts } from "../redux/actions/filter/filter";
 
@@ -8,8 +8,6 @@ import $ from 'jquery';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import no_img from "../assets/images/noImage.png";
-
 
 class Home extends React.Component {
 
@@ -96,8 +94,6 @@ class Home extends React.Component {
         const {
             fetchAllProducts,
             scrapingAllProducts,
-            productList,
-            scrapingList,
         } = this.props;
 
         if (fetchAllProducts) {
@@ -190,7 +186,7 @@ class Home extends React.Component {
                                     <div className="w3-dropdown-hover">
                                         <span className=""><i className="fa fa-bars menu-size" aria-hidden="true"></i></span>
                                         <div className="w3-dropdown-content w3-bar-block w3-border w3-text-white">
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <i className="far fa-user icon-padding"></i>
@@ -199,7 +195,7 @@ class Home extends React.Component {
                                                 </div>
                                             </a>
 
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <i className="fas fa-list-ul icon-padding"></i>
@@ -208,7 +204,7 @@ class Home extends React.Component {
                                                 </div>
                                             </a>
 
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <img className="offer-size" src={require('../assets/images/offers.svg')} alt="" />
@@ -219,7 +215,7 @@ class Home extends React.Component {
 
                                             <div className="w3-bar-item w3-border-bottom"></div>
 
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <i className="far fa-heart icon-padding"></i>
@@ -228,7 +224,7 @@ class Home extends React.Component {
                                                 </div>
                                             </a>
 
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <img className="percent-size"
@@ -238,7 +234,7 @@ class Home extends React.Component {
                                                 </div>
                                             </a>
 
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <img className="offer-size"
@@ -248,7 +244,7 @@ class Home extends React.Component {
                                                 </div>
                                             </a>
 
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <img className="percent-size"
@@ -260,7 +256,7 @@ class Home extends React.Component {
 
                                             <div className="w3-bar-item w3-border-bottom"></div>
 
-                                            <a href="#" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
+                                            <a href="/" className="w3-bar-item w3-btn w3-hover-text-amber btnUnderLine">
                                                 <div className="w3-row">
                                                     <div className="w3-col l3 m3 s3">
                                                         <img className="percent-size"
@@ -570,7 +566,7 @@ class Home extends React.Component {
                         </OwlCarousel>
                     </div>
 
-                    <div className="w3-row w3-right see-all show-more"><a>See All</a></div>
+                    <div className="w3-row w3-right see-all show-more">See All</div>
                 </section>
 
                 <section className="most-popular-product min-width">
@@ -585,7 +581,7 @@ class Home extends React.Component {
                                     this.state.nProduct ++;
                                     return (
                                         <div className="w3-card card-bg-padding">
-                                            <a href={item.scraping_store_address}><img className="img-item" key={key} src={item.scraping_photo_link}/></a>
+                                            <a href={item.scraping_store_address}><img className="img-item" key={key} src={item.scraping_photo_link} alt="" /></a>
                                             <div className="scraping-name">{item.scraping_name}</div>
                                             <div className="blue-txt">{item.scraping_description}</div>
                                             <div className="red-txt">SAR {item.scraping_price}</div>
@@ -603,7 +599,7 @@ class Home extends React.Component {
                                 if ((this.state.nProduct >= 8) && (typeof (item.scraping_price) !== "undefined")){
                                     return (
                                         <div className="w3-card card-bg-padding">
-                                            <a href={item.scraping_store_address}><img className="img-item" key={key} src={item.scraping_photo_link}/></a>
+                                            <a href={item.scraping_store_address}><img className="img-item" key={key} src={item.scraping_photo_link} alt="" /></a>
                                             <div className="scraping-name">{item.scraping_name}</div>
                                             <div className="blue-txt">{item.scraping_description}</div>
                                             <div className="red-txt">SAR {item.scraping_price}</div>
@@ -616,7 +612,7 @@ class Home extends React.Component {
                     </span>
 
                     <div className="w3-row w3-right see-all" data-toggle="collapse" data-target="#productsSeeAll">
-                        <a>See All</a>
+                       See All
                     </div>
                 </section>
 

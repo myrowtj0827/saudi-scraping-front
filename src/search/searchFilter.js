@@ -46,8 +46,6 @@ class SearchFilter extends React.Component {
             scrapingSortList,
         } = this.props;
 
-        const category = localStorage.getItem('category');
-
         const logoArray = {
             'noon.com': storeLogoNoon, // completed
             'blackbox.com.sa': blackBox, // completed
@@ -133,7 +131,7 @@ class SearchFilter extends React.Component {
                                                 <div className="w3-card best-match" key={key}>
                                                     <div className="w3-row justify-filter-content">
                                                         <div className="w3-col img-width">
-                                                            <a href={item.scraping_store_address}><img className="products-image" src={item.scraping_photo_link}/></a>
+                                                            <a href={item.scraping_store_address}><img className="products-image" src={item.scraping_photo_link} alt="" /></a>
                                                         </div>
 
                                                         <div className="w3-col name-width">

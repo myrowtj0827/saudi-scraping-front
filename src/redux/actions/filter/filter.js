@@ -2,7 +2,6 @@ import axios from "axios";
 import config from "../../../config/index"
 
 import {
-    SET_CURRENT_PRODUCT,
     MESSAGE_FORM_API,
     USER_LOADING,
     PRODUCT_ALL,
