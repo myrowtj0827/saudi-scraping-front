@@ -583,6 +583,8 @@ class Home extends React.Component {
                                             <div className="red-txt">SAR {item.scraping_price}</div>
                                         </div>
                                     )
+                                 } else {
+                                     return true;
                                  }
                             })
                         }
@@ -601,6 +603,8 @@ class Home extends React.Component {
                                             <div className="red-txt">SAR {item.scraping_price}</div>
                                         </div>
                                     )
+                                } else {
+                                    return true;
                                 }
                             })
                         }

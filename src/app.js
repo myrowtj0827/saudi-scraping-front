@@ -8,27 +8,6 @@ import Home from "./home/home";
 
 
 class App extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-    //
-    // navigatePage = (code) => {
-    //     if (code === 13) {
-    //         alert();
-    //         return <Redirect to='/target' />
-    //     }
-    // };
-    componentDidMount() {
-        // axios.get("https://jsonplaceholder.typicode.com/users/2")
-        //     .then(response => {
-        //         console.log(response.data)
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
-    }
-
     render() {
         return (
             <BrowserRouter>
