@@ -30,6 +30,8 @@ export const scrapingAllProducts = () => dispatch => {
     axios
         .get(config.SIM_API_URL + "api/scrapingProduct/scraping-product-all", )
         .then(res => {
+            console.log("Scraping Products -> ", res.data.results);
+
             dispatch({
                 type: SCRAPING_PRODUCT_ALL,
                 payload: res.data.results,
@@ -53,6 +55,8 @@ export const ScrapingSort = (category, history) => dispatch => {
     axios
         .post(config.SIM_API_URL + "api/scrapingProduct/scraping-product-sort", {category})
         .then(res => {
+            console.log("Scraping Sort Products -> ", res.data.results);
+
             dispatch({
                 type: SET_SCRAPING_SORT_PRODUCT,
                 payload: res.data.results,

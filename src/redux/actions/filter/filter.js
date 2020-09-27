@@ -28,6 +28,8 @@ export const fetchAllProducts = () => dispatch => {
     axios
         .get(config.SIM_API_URL + "api/filters/get-product-all", )
         .then(res => {
+            console.log("All Products -> ", res.data.results);
+
             dispatch({
                 type: PRODUCT_ALL,
                 payload: res.data.results,
@@ -51,6 +53,8 @@ export const SortProduct = (category, history) => dispatch => {
     axios
         .post(config.SIM_API_URL + "api/filters/get-product-sort", {category})
         .then(res => {
+            console.log("Sort Products -> ", res.data.results);
+
             dispatch({
                 type: SET_SORT_PRODUCT,
                 payload: res.data.results,
